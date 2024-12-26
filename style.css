@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #001d3d, #001023, #000000);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size:3.1em;
+    color: #f5a623;
+    text-shadow: 0 0 20px #f5a623, 0 0 40px #ffcc66;
+    margin-bottom: 20px;
+    animation: pulse 1.2s infinite;
+}
+h2{
+    font-size: 1.8em;
+    color: #f5a623;
+    text-shadow: 0 0 20px #f5a623, 0 0 40px #ffcc66;
+    margin-bottom: 20px;
+    animation: pulse 1.2s infinite;
+
+}
+/* Input Box */
+#guessnumber {
+    width: 80%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    border: 2px solid #f5a623;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(245, 166, 35, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+}
+
+#guessnumber:focus {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #f5a623;
+}
+
+/* Button */
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #e69718, #e46643);
+    color: #130101;
+    box-shadow: 0 0 20px #ba8735;
+    transition: transform 0.3s ease, box-shadow 0.1s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px #ff5722;
+}
+
+button:active {
+    animation: buttonPress 0.2s ease;
+}
+
+/* Button press animation */
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Text Animations */
+p {
+    font-size: 2.5em;
+    color: #baf523;
+    text-shadow: 0 0 20px #f5a623, 0 0 40px #ffcc66;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+    margin: 10px 0;
+    font-size: 2em;
+
+    
+}
+
+.result {
+    font-size: 2.5em;
+    color: #baf523;
+    text-shadow: 0 0 20px #f5a623, 0 0 40px #ffcc66;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+    
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease, color 1s ease;
+}
+
+.score {
+    font-weight: bold;
+}
+
+/* Glowing Pulse Animation for Title */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 20px #f5a623, 0 0 40px #ffcc66;
+    }
+    50% {
+        text-shadow: 0 0 30px #ffcc66, 0 0 60px #ffcc66;
+    }
+    100% {
+        text-shadow: 0 0 20px #f5a623, 0 0 40px #ffcc66;
+    }
+}
+
+/* Starfield Background */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: transparent;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+/* Moon Styles */
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #f5f3ce, #e3e0b8, #c1bf97);
+    border-radius: 50%;
+    box-shadow: 0 0 30px 10px rgba(255, 255, 200, 0.5), 
+                0 0 60px 20px rgba(255, 255, 200, 0.2);
+    z-index: -1;
+    animation: glow 5s infinite ease-in-out;
+}
+
+/* Moon Glow Animation */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 30px 10px rgba(255, 255, 200, 0.5), 
+                    0 0 60px 20px rgba(8, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 50px 15px rgba(255, 255, 200, 0.7), 
+                    0 0 80px 30px rgba(53, 53, 2, 0.4);
+    }
+}
+
+
+
+
