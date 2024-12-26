@@ -188,6 +188,29 @@ p {
                     0 0 80px 30px rgba(53, 53, 2, 0.4);
     }
 }
+/* Adjust font size and layout for small screens */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;  /* Smaller font size on mobile */
+    }
+    #guessnumber {
+        width: 80%; /* Make the input box smaller on mobile */
+        padding: 12px;
+    }
+    button {
+        padding: 12px 25px; /* Adjust button size for mobile */
+    }
+}
+
+/* Adjust animations for mobile (if needed) */
+@media only screen and (max-width: 600px) {
+    /* Reduce complexity of animations for smaller devices */
+    .moon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 
 
 
